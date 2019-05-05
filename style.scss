@@ -1,0 +1,129 @@
+@mixin  shadow {
+    -webkit-box-shadow: 0 0 30px 0 #333;
+    -moz-box-shadow: 0 0 30px 0 #333;
+    box-shadow: 0 0 30px 0 #333;
+}
+
+$brown: #370b18;
+
+body{
+    font-size: 1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: #be6e41;
+    color: $brown;
+
+    .container{
+        background: #fff;
+        margin: 120px auto;
+        width: 740px;
+        padding: 60px 30px;
+
+        @include shadow;
+
+        header{
+            text-align: center;
+
+            p{
+                font-size: 24px;
+                margin: 40px 0 20px 0;
+                color: #460d19;
+            }
+
+            h1{
+                font-size: 42px;
+                margin-bottom: 35px;
+            }
+        }
+
+        nav{
+            ul{
+                list-style: none;
+                border-bottom: 1px solid $brown;
+                border-top: 1px solid $brown;
+                display: flex;
+                width: 730px;
+                height: 44px;
+                padding: 0;
+                margin: 0 0 30px 0;
+                text-align: center;
+                align-items: center;
+
+                li{
+                    display: block;
+                    flex-grow: 1;
+                    height: 44px;
+                    box-sizing: border-box;
+                    padding: 10px 0;
+                    line-height: 1;
+                    font-size: 22px;
+
+                    &:hover{
+                        background: $brown;
+                        color: white;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        main{
+            display: flex;
+            align-items: flex-start;
+            margin: 30px 0;
+            padding: 0;
+            justify-content: space-between;
+            flex-direction: row;   
+            width: 100%; 
+
+            .text{
+                color: $brown;
+                width: 60%;
+
+                h2{
+                    font-size: 30px;
+                    margin: 10px 0;
+                }
+
+                p{
+                    font-size: 14px;
+                    text-align: justify;
+                    line-height: 24px;
+                }
+            }
+
+            img{
+                padding: 0 30px;
+            }
+        }
+
+        footer{
+            background: #a9c6d9;
+            height: 70px;
+            box-sizing: border-box;
+            padding: 20px;
+            margin-top: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            p{
+                color: #225473;
+                font-size: 20px;
+                letter-spacing: 1.4px;
+                font-weight: 500;
+                margin: 0;
+                padding: 0;
+            }
+
+            .socials{
+                display: inline-flex;
+
+                img{
+                    margin: 0 5px;
+                    padding: 0;
+                    border: none;
+                }
+            }
+        }
+    }
+}
